@@ -1,1 +1,1 @@
-https://github.com/Polchaninova/rsschool-cv/branches
+https://Polchaninova.github.io/rsschool-cv/cv
