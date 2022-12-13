@@ -1,13 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="style.css" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#education">Education</a>
+          </li>
+          <li>
+            <a href="#languages">Languages</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="personal-info">
+        <h2>Hi👋I am</h2>
+        <h1>Olga Polchaninova</h1>
+        <h3>Junior Frontend Developer</h3>
+        <hr />
+        <article class="contact" id="contact">
+          <img
+            src="./image/personal-photo.jpg"
+            alt="personal-photo"
+            width="250"
+            height="320"
+          />
+          <h2>Contact me:</h2>
+
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:polchaninovaolha089@gmail.com" class="email-link">
+                polchaninovaolha089@gmail.com</a
+              >
+            </li>
+
+            <li>Phone:<a href="tel:+38095732014">+38095732014</a></li>
+
+            <li>
+              linkedin:
+              <a href="https://www.linkedin.com/feed/">linkedin</a>
+            </li>
+            <li>
+              GitHub: <a href="https://github.com/Polchaninova">GitHub</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="about" id="about">
+        <h2>About me:</h2>
+        <p class="about-description">
+          I am currently looking for new opportunities in front-end development.
+          I am open to remote work and a flexible schedule.
+        </p>
+        <p class="about-description">
+          I recently completed the "front-end development" course at the
+          "SheCodes" company. I learned a fairly good knowledge base of HTML,
+          CSS, JS and React languages.
+        </p>
+        <p class="about-description">
+          Currently, I came to the RS Schools Course «JavaScript/Front-end.
+          Stage 0» to improve my knowledge and get a job in the company EPAM.
+        </p>
+        <hr />
+      </section>
+      <section class="skills" id="skills">
+        <h2>Skills:</h2>
+        <ul>
+          <li>HTML, Markdown, CSS</li>
+          <li>VS Code</li>
+          <li>API,GitHub</li>
+          <li>Bootstrap,Hosting</li>
+          <li>Responsive</li>
+          <li>SEO, Flexbox</li>
+        </ul>
+        <hr />
+        <h2 id="education">Courses:</h2>
+        <ul>
+          <li>
+            SheCodes course period from July 18, 2022 to 12 December, 2022
+            (completed)
+          </li>
+          <li>IT Marathon to the EPAM University Program (completed)</li>
+          <li>
+            English course
+            <a href="https://lingualeo.com/ru/profile/edit">Lingualeo.</a>My
+            goal is Advanced level (C1)(in progress)
+          </li>
+          <li>
+            RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
+          </li>
+        </ul>
+      </section>
+      <section class="languages" id="languages">
+        <h2>Languages:</h2>
+        <ul>
+          <li>
+            English - A1 (Elementary)
+            <a href="https://training.epam.ua/Inbox#!/Notifications?lang=ua"
+              >English level</a
+            >
+          </li>
+          <li>Ukrainian - Native</li>
+          <li>Russian - Intermediate</li>
+        </ul>
+      </section>
+      <section class="example-code">
+        <h2>Example-code: Project Weather App</h2>
+        <p class="code-description">
+          When a user searches for a city (example: Kharkiv), it should display
+          the name of the city on the result page and the current temperature of
+          the city.
+        </p>
+
+        <pre> <code>function search(event) { 
+          event.preventDefault(); 
+          let cityElement = document.querySelector("#city"); 
+          let cityInput = document.querySelector("#city-input");
+          let cityName = cityInput.value;
+          cityElement.innerHTML = cityName; 
+          showWeatherForCity(cityName); 
+        }
+          function showTemperature(response) { 
+          let temperature = Math.round(response.data.main.temp); 
+          let city = response.data.name;
+          let message = `Today in ${city}`; 
+          let h1 = document.querySelector("h1"); 
+          h1.innerHTML = message; 
+          console.log(h1);
+          console.log(message); 
+          let currentTempElement =
+          document.querySelector("#temperature"); 
+          currentTempElement.innerHTML =
+          temperature; 
+        } 
+          function getWeatherForCity(cityName) { 
+            let apiKey =
+          "b5fdbe7ffc620c1e309259a98257fdc7"; 
+          let units = "metric"; 
+          let apiUrl =
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+          return axios.get(apiUrl); 
+        } </code></pre>
+        <hr />
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="mailto:polchaninovaolha089@gmail.com"
+            >polchaninovaolha089@gmail.com</a
+          >
+        </li>
+        <li><a href="tel:+38095732014">+38095732014</a></li>
+        <li><a href="https://github.com/Polchaninova">GitHub</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
