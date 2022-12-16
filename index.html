@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CV</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navigation">
+          <li class="header-nav">
+            <a href="#about" class="top-nav">About</a>
+          </li>
+          <li class="header-nav">
+            <a href="#skills" class="top-nav">Skills</a>
+          </li>
+          <li class="header-nav">
+            <a href="#education" class="top-nav">Education</a>
+          </li>
+          <li class="header-nav">
+            <a href="#languages" class="top-nav">Languages</a>
+          </li>
+          <li class="header-nav">
+            <a href="#contact" class="top-nav">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section class="personal-info">
+          <h2 class="welcome">Hi👋I am</h2>
+          <h1>Olga Polchaninova</h1>
+          <h3>Junior Frontend Developer</h3>
+          <article class="contact-box" id="contact">
+            <img
+              class="photo-me"
+              src="./image/personal-photo.jpg"
+              alt="personal-photo"
+            />
+
+            <h2 class="desc-contact">Contact me</h2>
+            <ul>
+              <li class="contact-call">
+                Email:
+                <a
+                  class="link-contact"
+                  href="mailto:polchaninovaolha089@gmail.com"
+                >
+                  polchaninovaolha089@gmail.com</a
+                >
+              </li>
+
+              <li class="contact-call">
+                Phone:
+                <a class="link-contact" href="tel:+38095732014">+38095732014</a>
+              </li>
+
+              <li class="contact-call">
+                linkedin:
+                <a class="link-contact" href="https://www.linkedin.com/feed/"
+                  >linkedin</a
+                >
+              </li>
+              <li class="contact-call">
+                GitHub:
+                <a class="link-contact" href="https://github.com/Polchaninova"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="about" id="about">
+          <h2>About me</h2>
+          <p class="about-description">
+            I am currently looking for new opportunities in front-end
+            development. I am open to remote work and a flexible schedule.
+          </p>
+          <p class="about-description">
+            I recently completed the "front-end development" course at the
+            "SheCodes" company. I learned a fairly good knowledge base of HTML,
+            CSS, JS and React languages.
+          </p>
+          <p class="about-description">
+            Currently, I came to the RS Schools Course «JavaScript/Front-end.
+            Stage 0» to improve my knowledge and get a job in the company EPAM.
+          </p>
+        </section>
+        <section class="skills" id="skills">
+          <h2>Skills</h2>
+          <ol>
+            <li class="skills-description">HTML, Markdown, CSS</li>
+            <li class="skills-description">VS Code</li>
+            <li class="skills-description">API,GitHub</li>
+            <li class="skills-description">Bootstrap,Hosting</li>
+            <li class="skills-description">Responsive</li>
+            <li class="skills-description">SEO, Flexbox</li>
+          </ol>
+
+          <h2 id="education">Courses</h2>
+          <ol>
+            <li class="skills-description">
+              SheCodes course period from July 18, 2022 to 12 December, 2022
+              (completed)
+            </li>
+            <li class="skills-description">
+              IT Marathon to the EPAM University Program (completed)
+            </li>
+            <li class="skills-description">
+              English course
+              <a class="link-about" href="https://lingualeo.com/ru/profile/edit"
+                >Lingualeo.</a
+              >My goal is Advanced level (C1)(in process)
+            </li>
+            <li class="skills-description">
+              RS Schools Course «JavaScript/Front-end. Stage 0» (in process)
+            </li>
+          </ol>
+          <!-- </section> -->
+          <!-- <section class="languages" > -->
+          <h2 id="languages">Languages</h2>
+          <ol>
+            <li class="skills-description">
+              English - A1 (Elementary)
+              <a
+                class="link-about"
+                href="https://training.epam.ua/Inbox#!/Notifications?lang=ua"
+                >English level (in process)</a
+              >
+            </li>
+            <li class="skills-description">Ukrainian - Native</li>
+            <li class="skills-description">Russian - Intermediate</li>
+          </ol>
+        </section>
+        <section class="example-code">
+          <h2 class="name-block-code">Example-code: Project Weather App</h2>
+          <p class="code-description">
+            When a user searches for a city (example: Kharkiv), it should
+            display the name of the city on the result page and the current
+            temperature of the city.
+          </p>
+
+          <pre class="coding"> <code>
+  function search(event) { 
+      event.preventDefault(); 
+      let cityElement = document.querySelector("#city"); 
+      let cityInput = document.querySelector("#city-input");
+      let cityName = cityInput.value;
+      cityElement.innerHTML = cityName; 
+      showWeatherForCity(cityName); 
+      }
+  function showTemperature(response) { 
+      let temperature = Math.round(response.data.main.temp); 
+      let city = response.data.name;
+      let message = `Today in ${city}`; 
+      let h1 = document.querySelector("h1"); 
+      h1.innerHTML = message; 
+      console.log(h1);
+      console.log(message); 
+      let currentTempElement =
+      document.querySelector("#temperature"); 
+      currentTempElement.innerHTML =
+      temperature; 
+     } 
+  function getWeatherForCity(cityName) { 
+        let apiKey =
+      "b5fdbe7ffc620c1e309259a98257fdc7"; 
+      let units = "metric"; 
+      let apiUrl =
+`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+      return axios.get(apiUrl); 
+      } </code></pre>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <a href="https://app.rs.school" target="_blank">
+        <img class="logo" src="./image/logo.png" alt="logo"
+      /></a>
+      <ul>
+        <li>
+          <a class="footer-link" href="https://github.com/Polchaninova"
+            >GitHub 2022</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
