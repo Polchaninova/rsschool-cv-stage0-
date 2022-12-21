@@ -1,0 +1,29 @@
+.container {
+  padding-top: 42px;
+  background-color: #edf2ec;
+}
+
+nav {
+  margin: 0 122px 0 122px;
+  font-family: "Inika";
+}
+.list-nav {
+  margin-right: 46px;
+  list-style-type: none;
+}
+.link-nav {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50px;
+  color: #010201;
+  text-decoration: none;
+}
+.link-nav:hover {
+  color: #e06733;
+}
+.header-nav {
+  display: flex;
+}
+.logo-nav {
+  margin-right: auto;
+}
