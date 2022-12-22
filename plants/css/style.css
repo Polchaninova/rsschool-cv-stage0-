@@ -1,16 +1,22 @@
 .container {
-  padding-top: 42px;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding-top: 42px; */
   background-color: #edf2ec;
+  color: #010201;
 }
 
 nav {
-  margin: 0 122px 0 122px;
+  padding: 42px 112px 42px 112px;
+  margin-bottom: 62px;
   font-family: "Inika";
+  /* font-family: "Inika"; */
 }
 .list-nav {
   margin-right: 46px;
   list-style-type: none;
 }
+
 .link-nav {
   font-weight: 400;
   font-size: 16px;
@@ -21,9 +27,66 @@ nav {
 .link-nav:hover {
   color: #e06733;
 }
+.list-nav:nth-child(2) .link-nav {
+  color: #e06733;
+}
 .header-nav {
   display: flex;
 }
 .logo-nav {
   margin-right: auto;
+}
+.section-welcome {
+  width: 1440px;
+  height: 532px;
+  padding: 62px 112px 0 112px;
+  padding-bottom: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome-picture {
+  height: 407px;
+  width: 448px;
+}
+.welcome-content {
+  width: 549px;
+  font-family: "Inter";
+  border-radius: 10px;
+}
+.welcome-content-title {
+  margin-bottom: 42px;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #717171;
+}
+.welcome-span {
+  font-size: 55px;
+  color: #499a18;
+}
+.welcome-description {
+  margin-bottom: 48px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #636060;
+}
+.btn-welcome {
+  padding: 12px 27px 12px 28px;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #edf2ec;
+}
+.btn-welcome:hover,
+.btn-welcome:focus {
+  border: 2px solid #636060;
+  border-radius: 10px;
+  background-color: #cde4b6;
 }
