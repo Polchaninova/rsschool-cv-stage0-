@@ -24,11 +24,13 @@
     <header class="container">
       <nav>
         <ul class="header-nav">
-          <li class="list-nav logo-nav" href="#">
+          <li class="list-nav logo-nav">
             <img src="./image/logo_vector.png" alt="logo-plants" />
             Plants
           </li>
-          <li class="list-nav"><a class="link-nav" href="#">Home</a></li>
+          <li class="list-nav">
+            <a class="link-nav" href="./index.html">Home</a>
+          </li>
           <li class="list-nav"><a class="link-nav" href="#">About us</a></li>
           <li class="list-nav"><a class="link-nav" href="#">Service</a></li>
           <li class="list-nav"><a class="link-nav" href="#">Price</a></li>
@@ -74,7 +76,7 @@
         <div class="about-img">
           <img
             class="about-picture"
-            src="./image/houseplant 1.png"
+            src="./image/houseplant.png"
             alt="plant-houseplant"
           />
         </div>
@@ -217,20 +219,84 @@
         <div class="prices_text_call">
           <div class="prices_call">
             <h4 class="prices_description">
-              Our best <span class="welcome-span">gardeners</span>are ready to
+              Our best <span class="prices_span"> gardeners </span> are ready to
               help you
             </h4>
             <button class="price_contact_btn">Contact us</button>
           </div>
-          <img
-            class="prices_btn_click"
-            src="./image/leafs.png"
-            alt="houseplant_small"
-            width="152"
-            height="175"
-          />
+          <div class="price_img">
+            <img
+              class="prices_plans"
+              src="./image/leaf_small.png"
+              alt="houseplant_small"
+            />
+          </div>
         </div>
       </section>
+      <section class="contacts">
+        <img
+          class="contact_img_woman"
+          src="./image/contact_woman.png"
+          alt="contact_woman"
+        />
+        <h2 class="contact_title">Contact us</h2>
+
+        <form
+          class="contact_form"
+          action="./image/accordion_btn.svg"
+          target="_top"
+        >
+          <div class="contact_input-wrapper">
+            <select class="contact_input">
+              <option value="City">City</option>
+            </select>
+          </div>
+        </form>
+      </section>
     </main>
+    <footer class="footer_data container">
+      <ul class="info_data">
+        <li class="info_contact">©</li>
+        <li class="info_contact">2022</li>
+        <li class="info_contact">
+          <a href="https://github.com/Polchaninova">GitHub</a>
+        </li>
+      </ul>
+
+      <a class="info_school_link" href="https://rs.school/js-stage0/"
+        >Rolling Scopes School</a
+      >
+
+      <ul class="info_icons">
+        <li class="info_icon">
+          <img
+            class="info_icon_link"
+            src="./image/icon_footer/insta.svg"
+            alt="instagram"
+          />
+        </li>
+        <li class="info_icon">
+          <img
+            class="info_icon_link"
+            src="./image/icon_footer/facebook.svg"
+            alt="facebook"
+          />
+        </li>
+        <li class="info_icon">
+          <img
+            class="info_icon_link"
+            src="./image/icon_footer/twiter.svg"
+            alt="twitter"
+          />
+        </li>
+        <li class="info_icon">
+          <img
+            class="info_icon_link"
+            src="./image/icon_footer/email.svg"
+            alt="email"
+          />
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
