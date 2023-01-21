@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=0"
+    />
+
     <title>Plants</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,19 +42,19 @@
           <nav class="header_menu">
             <ul class="header_list">
               <li class="header_item_li">
-                <a class="header_link" href="./index.html">Home</a>
+                <a class="header_link active" href="./index.html">Home</a>
               </li>
               <li class="header_item_li">
-                <a class="header_link" href="#">About us</a>
+                <a class="header_link" href="#about">About us</a>
               </li>
               <li class="header_item_li">
-                <a class="header_link" href="#">Service</a>
+                <a class="header_link" href="#service">Service</a>
               </li>
               <li class="header_item_li">
-                <a class="header_link" href="#">Price</a>
+                <a class="header_link" href="#price">Price</a>
               </li>
               <li class="header_item_li">
-                <a class="header_link" href="#">Contacts</a>
+                <a class="header_link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -64,7 +67,7 @@
           <div class="welcome-img">
             <img class="welcome-picture" src="./image/leafs.png" alt="leafs" />
           </div>
-          <div class="welcome-content">
+          <div class="welcome-content" id="about">
             <h1 class="welcome-content-title">
               We grow <span class="welcome-span"> plants </span> and give you
               oxygen
@@ -107,8 +110,8 @@
       </section>
 
       <section class="service">
-        <div class="container">
-          <div class="services_content">
+        <div class="container service_adaptive">
+          <div class="services_content" id="service">
             <h2 class="service_title">Service and our projects</h2>
             <div class="services_content_btn">
               <button class="btn_gardens">Gardens</button>
@@ -117,100 +120,100 @@
             </div>
           </div>
           <div class="service_item">
-            <div class="service_first_block">
-              <div>
-                <img
-                  class="service_list_img"
-                  src="./image/plant-aloe.png"
-                  alt="aloe"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Garden care</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <img
-                  class="service_list_img"
-                  src="./image/plant-lime.png"
-                  alt="plant-lime"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Planting</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <img
-                  class="service_list_img"
-                  src="./image/plant-water.png"
-                  alt="plant-water"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Lawn care</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="service_second_block">
-              <div>
-                <img
-                  class="service_list_img"
-                  src="./image/plant-rose.png"
-                  alt="plant-rose"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Planting</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <img
-                  class="service_list_img"
-                  src="./image/plant-many.png"
-                  alt="plant-many"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Garden care</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
-              </div>
-
+            <!-- <div class="service_first_block"> -->
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-aloe.png"
+                alt="aloe"
+              />
               <div class="service_card">
-                <img
-                  class="service_list_img"
-                  src="./image/plant-cactus.png"
-                  alt="plant-cactus"
-                />
-                <div class="service_card">
-                  <h4 class="service_card_title">Planting</h4>
-                  <p class="service_description">
-                    Lorem Ipsum has been the industry
-                  </p>
-                </div>
+                <h4 class="service_card_title">Garden care</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
               </div>
             </div>
+
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-lime.png"
+                alt="plant-lime"
+              />
+              <div class="service_card">
+                <h4 class="service_card_title">Planting</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
+              </div>
+            </div>
+
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-water.png"
+                alt="plant-water"
+              />
+              <div class="service_card">
+                <h4 class="service_card_title">Lawn care</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
+              </div>
+              <!-- </div> -->
+            </div>
+
+            <!-- <div class="service_second_block"> -->
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-rose.png"
+                alt="plant-rose"
+              />
+              <div class="service_card">
+                <h4 class="service_card_title">Planting</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
+              </div>
+            </div>
+
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-many.png"
+                alt="plant-many"
+              />
+              <div class="service_card">
+                <h4 class="service_card_title">Garden care</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
+              </div>
+            </div>
+
+            <div class="serv_adaptiv">
+              <img
+                class="service_list_img"
+                src="./image/plant-cactus.png"
+                alt="plant-cactus"
+              />
+              <div class="service_card">
+                <h4 class="service_card_title">Planting</h4>
+                <p class="service_description">
+                  Lorem Ipsum has been the industry
+                </p>
+              </div>
+            </div>
+            <!-- </div> -->
           </div>
         </div>
       </section>
 
       <section class="section_prices">
         <div class="container prices">
-          <div class="prices_item">
+          <div class="prices_item" id="price">
             <h2 class="prices_title">Prices</h2>
             <ul class="prices_list_item">
               <li class="prices_list">
@@ -265,22 +268,21 @@
       </section>
 
       <section class="section_contacts">
-        <div class="container contacts">
+        <div class="container contacts" id="contacts">
           <img
             class="contact_img_woman"
             src="./image/contact_woman.png"
             alt="contact_woman"
           />
           <h2 class="contact_title">Contact us</h2>
-
           <form
             class="contact_form"
             action="./image/accordion_btn.svg"
             target="_top"
           >
             <div class="contact_input-wrapper">
-              <select class="contact_input">
-                <option value="City">City</option>
+              <select class="contact_input" id="city" name="city">
+                <option class="cont_opt" value="City">City</option>
               </select>
             </div>
           </form>
