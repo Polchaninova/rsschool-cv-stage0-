@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=0"
+    />
+
     <title>Plants</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,78 +25,103 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <nav>
-        <ul class="header-nav">
-          <li class="list-nav logo-nav">
-            <img src="./image/logo_vector.png" alt="logo-plants" />
+    <header class="header">
+      <div class="container">
+        <div class="header_body">
+          <a class="logo_a">
+            <img
+              class="logo_img"
+              src="./image/logo_vector.png"
+              alt="logo-plants"
+            />
             Plants
-          </li>
-          <li class="list-nav">
-            <a class="link-nav" href="./index.html">Home</a>
-          </li>
-          <li class="list-nav"><a class="link-nav" href="#">About us</a></li>
-          <li class="list-nav"><a class="link-nav" href="#">Service</a></li>
-          <li class="list-nav"><a class="link-nav" href="#">Price</a></li>
-          <li class="list-nav">
-            <a class="link-nav" href="#">Contacts</a>
-          </li>
-        </ul>
-      </nav>
+          </a>
+          <div class="header_burger">
+            <span></span>
+          </div>
+          <nav class="header_menu">
+            <ul class="header_list">
+              <li class="header_item_li">
+                <a class="header_link active" href="./index.html">Home</a>
+              </li>
+              <li class="header_item_li">
+                <a class="header_link" href="#about">About us</a>
+              </li>
+              <li class="header_item_li">
+                <a class="header_link" href="#service">Service</a>
+              </li>
+              <li class="header_item_li">
+                <a class="header_link" href="#price">Price</a>
+              </li>
+              <li class="header_item_li">
+                <a class="header_link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main class="container">
+    <main>
       <section class="section-welcome">
-        <div class="welcome-img">
-          <img class="welcome-picture" src="./image/leafs.png" alt="leafs" />
-        </div>
-        <div class="welcome-content">
-          <h1 class="welcome-content-title">
-            We grow <span class="welcome-span"> plants </span> and give you
-            oxygen
-          </h1>
-          <p class="welcome-description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
-          <button class="btn-welcome">learn more</button>
-        </div>
-      </section>
-      <section class="section-about">
-        <div class="about-content">
-          <h2 class="about-title">
-            We are
-            <span class="about-span">professional experienced </span> gardeners
-          </h2>
-          <p class="about-description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-        </div>
-        <div class="about-img">
-          <img
-            class="about-picture"
-            src="./image/houseplant.png"
-            alt="plant-houseplant"
-          />
-        </div>
-      </section>
-      <section class="service">
-        <div class="services_content">
-          <h2 class="service_title">Service and our projects</h2>
-          <div class="services_content_btn">
-            <button class="btn_gardens">Gardens</button>
-            <button class="btn_lawn">Lawn</button>
-            <button class="btn_planting">Planting</button>
+        <div class="container welcome">
+          <div class="welcome-img">
+            <img class="welcome-picture" src="./image/leafs.png" alt="leafs" />
+          </div>
+          <div class="welcome-content" id="about">
+            <h1 class="welcome-content-title">
+              We grow <span class="welcome-span"> plants </span> and give you
+              oxygen
+            </h1>
+            <p class="welcome-description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+            <button class="btn-welcome">learn more</button>
           </div>
         </div>
-        <div class="service_item">
-          <div class="service_first_block">
-            <div>
+      </section>
+
+      <section class="section-about">
+        <div class="container about">
+          <div class="about-content">
+            <h2 class="about-title">
+              We are
+              <span class="about-span">professional experienced </span>
+              gardeners
+            </h2>
+            <p class="about-description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+          <div class="about-img">
+            <img
+              class="about-picture"
+              src="./image/houseplant.png"
+              alt="plant-houseplant"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="service">
+        <div class="container service_adaptive">
+          <div class="services_content" id="service">
+            <h2 class="service_title">Service and our projects</h2>
+            <div class="services_content_btn">
+              <button class="btn_gardens">Gardens</button>
+              <button class="btn_lawn">Lawn</button>
+              <button class="btn_planting">Planting</button>
+            </div>
+          </div>
+          <div class="service_item">
+            <!-- <div class="service_first_block"> -->
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-aloe.png"
@@ -106,7 +135,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-lime.png"
@@ -120,7 +149,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-water.png"
@@ -132,11 +161,11 @@
                   Lorem Ipsum has been the industry
                 </p>
               </div>
+              <!-- </div> -->
             </div>
-          </div>
 
-          <div class="service_second_block">
-            <div>
+            <!-- <div class="service_second_block"> -->
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-rose.png"
@@ -150,7 +179,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-many.png"
@@ -164,7 +193,7 @@
               </div>
             </div>
 
-            <div class="service_card">
+            <div class="serv_adaptiv">
               <img
                 class="service_list_img"
                 src="./image/plant-cactus.png"
@@ -177,126 +206,136 @@
                 </p>
               </div>
             </div>
+            <!-- </div> -->
           </div>
         </div>
       </section>
-      <section class="prices">
-        <div class="prices_item">
-          <h2 class="prices_title">Prices</h2>
-          <ul class="prices_list_item">
-            <li class="prices_list">
-              <button class="price_btn">
-                Basics
-                <img
-                  class="prices_btn_click"
-                  src="./image/accordion_btn.png"
-                  alt="btn-click"
-                />
-              </button>
-            </li>
-            <li class="prices_list">
-              <button class="price_btn">
-                Standard
-                <img
-                  class="prices_btn_click"
-                  src="./image/accordion_btn.png"
-                  alt="btn-click"
-                />
-              </button>
-            </li>
-            <li class="prices_list">
-              <button class="price_btn">
-                Pro care
-                <img
-                  class="prices_btn_click"
-                  src="./image/accordion_btn.png"
-                  alt="btn-click"
-                />
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="prices_text_call">
-          <div class="prices_call">
-            <h4 class="prices_description">
-              Our best <span class="prices_span"> gardeners </span> are ready to
-              help you
-            </h4>
-            <button class="price_contact_btn">Contact us</button>
-          </div>
-          <div class="price_img">
-            <img
-              class="prices_plans"
-              src="./image/leaf_small.png"
-              alt="houseplant_small"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="contacts">
-        <img
-          class="contact_img_woman"
-          src="./image/contact_woman.png"
-          alt="contact_woman"
-        />
-        <h2 class="contact_title">Contact us</h2>
 
-        <form
-          class="contact_form"
-          action="./image/accordion_btn.svg"
-          target="_top"
-        >
-          <div class="contact_input-wrapper">
-            <select class="contact_input">
-              <option value="City">City</option>
-            </select>
+      <section class="section_prices">
+        <div class="container prices">
+          <div class="prices_item" id="price">
+            <h2 class="prices_title">Prices</h2>
+            <ul class="prices_list_item">
+              <li class="prices_list">
+                <button class="price_btn">
+                  Basics
+                  <img
+                    class="prices_btn_click"
+                    src="./image/accordion_btn.png"
+                    alt="btn-click"
+                  />
+                </button>
+              </li>
+              <li class="prices_list">
+                <button class="price_btn">
+                  Standard
+                  <img
+                    class="prices_btn_click"
+                    src="./image/accordion_btn.png"
+                    alt="btn-click"
+                  />
+                </button>
+              </li>
+              <li class="prices_list">
+                <button class="price_btn">
+                  Pro care
+                  <img
+                    class="prices_btn_click"
+                    src="./image/accordion_btn.png"
+                    alt="btn-click"
+                  />
+                </button>
+              </li>
+            </ul>
           </div>
-        </form>
+          <div class="prices_text_call">
+            <div class="prices_call">
+              <h4 class="prices_description">
+                Our best <span class="prices_span"> gardeners </span> are ready
+                to help you
+              </h4>
+              <button class="price_contact_btn">Contact us</button>
+            </div>
+            <div class="price_img">
+              <img
+                class="prices_plans"
+                src="./image/leaf_small.png"
+                alt="houseplant_small"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section_contacts">
+        <div class="container contacts" id="contacts">
+          <img
+            class="contact_img_woman"
+            src="./image/contact_woman.png"
+            alt="contact_woman"
+          />
+          <h2 class="contact_title">Contact us</h2>
+          <form
+            class="contact_form"
+            action="./image/accordion_btn.svg"
+            target="_top"
+          >
+            <div class="contact_input-wrapper">
+              <select class="contact_input" id="city" name="city">
+                <option class="cont_opt" value="City">City</option>
+              </select>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
-    <footer class="footer_data container">
-      <ul class="info_data">
-        <li class="info_contact">©</li>
-        <li class="info_contact">2022</li>
-        <li class="info_contact">
-          <a href="https://github.com/Polchaninova">GitHub</a>
-        </li>
-      </ul>
+    <footer class="footer">
+      <div class="container footer_data">
+        <ul class="info_data">
+          <li class="info_contact">©</li>
+          <li class="info_contact">2022</li>
+          <li class="info_contact">
+            <a href="https://github.com/Polchaninova">GitHub</a>
+          </li>
+        </ul>
 
-      <a class="info_school_link" href="https://rs.school/js-stage0/"
-        >Rolling Scopes School</a
-      >
+        <a class="info_school_link" href="https://rs.school/js-stage0/"
+          >Rolling Scopes School</a
+        >
 
-      <ul class="info_icons">
-        <li class="info_icon">
-          <img
-            class="info_icon_link"
-            src="./image/icon_footer/insta.svg"
-            alt="instagram"
-          />
-        </li>
-        <li class="info_icon">
-          <img
-            class="info_icon_link"
-            src="./image/icon_footer/facebook.svg"
-            alt="facebook"
-          />
-        </li>
-        <li class="info_icon">
-          <img
-            class="info_icon_link"
-            src="./image/icon_footer/twiter.svg"
-            alt="twitter"
-          />
-        </li>
-        <li class="info_icon">
-          <img
-            class="info_icon_link"
-            src="./image/icon_footer/email.svg"
-            alt="email"
-          />
-        </li>
-      </ul>
+        <ul class="info_icons">
+          <li class="info_icon">
+            <img
+              class="info_icon_link"
+              src="./image/icon_footer/insta.svg"
+              alt="instagram"
+            />
+          </li>
+          <li class="info_icon">
+            <img
+              class="info_icon_link"
+              src="./image/icon_footer/facebook.svg"
+              alt="facebook"
+            />
+          </li>
+          <li class="info_icon">
+            <img
+              class="info_icon_link"
+              src="./image/icon_footer/twiter.svg"
+              alt="twitter"
+            />
+          </li>
+          <li class="info_icon">
+            <img
+              class="info_icon_link"
+              src="./image/icon_footer/email.svg"
+              alt="email"
+            />
+          </li>
+        </ul>
+      </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
