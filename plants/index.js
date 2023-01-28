@@ -1,6 +1,6 @@
 const iconMenu = document.querySelector(`.header_burger`);
 const headerMenu = document.querySelector(`.header_menu`);
-const overlay = document.querySelector(".burger-menu_overlay");
+const overlay = document.querySelector(`.burger-menu_overlay`);
 
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
@@ -9,13 +9,12 @@ if (iconMenu) {
     headerMenu.classList.toggle(`active`);
   });
 }
+overlay.addEventListener("click", () => toggle(`.header_burger.active `));
 
 const menuLinks = document.querySelectorAll(`.header_link`);
 if (menuLinks.length > 0) {
   menuLinks.forEach((menuLink) => {
     menuLink.addEventListener(`click`, onMenuLinkClick);
-
-    overlay.addEventListener("click", () => toggleMenuLinks());
   });
 }
 function onMenuLinkClick(e) {
