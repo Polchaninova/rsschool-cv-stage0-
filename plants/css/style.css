@@ -6,6 +6,8 @@
   --color-black: #000000;
   --color-description-text: #636060;
   --background-block-light: #edf2ec;
+  --color-border-price: #aea1a1;
+  --color-second-white: #fff;
 }
 
 *,
@@ -643,7 +645,7 @@ a:active {
 .btn_lawn:focus,
 .btn_planting:hover,
 .btn_planting:focus {
-  color: white;
+  color: var(--color-second-white);
   background-color: var(--color-accept-tomato);
   border: 1px solid var(--color-accept-tomato);
   transition: 250ms;
@@ -686,7 +688,9 @@ a:active {
   padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
+
   border: 1px solid #e3e1d5;
+
   border-radius: 0px 0px 20px 20px;
 }
 /* h2 */
@@ -874,159 +878,6 @@ a:active {
     width: 280px;
   }
 }
-
-/* @media (max-width: 767px) {
-  .container {
-    max-width: 380px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  .service_adaptive {
-    display: block;
-  }
-  .services_content {
-    max-width: 100%;
-    padding: 60px 0 0 0;
-    display: block;
-    padding: 0;
-  }
-  .service {
-    font-family: "Inika";
-    font-weight: 400;
-  }
-  .service_title {
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 35px;
-    padding-top: 30px;
-    max-width: 184px;
-    max-height: 89px;
-
-    font-size: 25px;
-    text-align: left;
-  }
-  .services_content_btn {
-    max-width: 260px;
-    max-height: 79px;
-    margin-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: unset;
-  }
-  .btn_gardens,
-  .btn_lawn,
-  .btn_planting {
-    width: 121px;
-    height: 35px;
-    margin-right: 10px;
-    padding: 8px 28px;
-    font-size: 15px;
-    margin-bottom: 9px;
-  }
-  .btn_lawn {
-    padding: 8px 28px;
-    margin-right: 9px;
-  }
-  .btn_gardens {
-    margin-right: 9px;
-  }
-  .service_first_block,
-  .service_second_block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .service_first_block {
-    margin-bottom: 0;
-  }
-  .serv_adaptiv {
-    margin-bottom: 34px;
-    max-width: 280px;
-  }
-  .service_item {
-    padding: 42px 0 0 0;
-  }
-  .service_list_img {
-    max-width: 100%;
-    display: block;
-  }
-  .service_card {
-    max-width: 279px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
-
-  .service_card_title {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 10px;
-  }
-  .service_description {
-    width: 262px;
-  }
-}  */
-/* .service_item - div container for block */
-
-/* @media (min-width: 768px) and (max-width: 1400px) { */
-/* .container {
-    max-width: 768px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .service_adaptive {
-    max-width: 768px;
-  }
-  .services_content {
-    max-width: 100%;
-    display: block;
-    padding: 60px 0 0 0;
-  }
-  .service_title {
-    margin-right: unset;
-    margin-top: unset;
-    margin-bottom: 40px;
-    padding-top: unset;
-    max-width: 306px;
-    max-height: unset;
-    font-size: 35px;
-    text-align: left;
-  }
-  .services_content_btn {
-    max-width: 559px;
-    max-height: 50px;
-    margin-top: 0;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-  }
-
-  .btn_gardens,
-  .btn_lawn {
-    margin-right: 38px;
-    font-size: 20px;
-    /* margin-bottom: 40px; */
-
-/* .btn_planting {
-  margin-right: 0;
-  padding: 12px 40px;
-}
-.btn_lawn {
-  margin-right: 38px;
-  padding: 12px 54px;
-}
-.btn_gardens {
-  margin-right: 38px;
-  padding: 12px 40px;
-}
-.service_first_block,
-.service_second_block {
-  display: flex;
-  flex-wrap: wrap;
-}
-.service_first_block {
-  margin-bottom: 0;
-} */
-
 .prices {
   display: flex;
   justify-content: space-between;
@@ -1034,8 +885,7 @@ a:active {
   padding-bottom: 100px;
   padding-top: 40px;
 }
-.prices_item {
-}
+
 .prices_title {
   font-weight: 700;
   font-size: 40px;
@@ -1043,23 +893,40 @@ a:active {
 
   color: var(--color-black);
 }
+.accordion_body {
+  min-height: 100vh;
+}
+/* accordion */
 .prices_list_item {
   padding: 34px 41px;
-  margin: 60px 0 0 0;
+  margin: 60px 0 0 32;
+
+  max-width: 332px;
+  width: 100%;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
+
+  box-shadow: 0 0 4px rgba (0, 0, 0, 0.2);
 }
+
 .prices_list {
-  margin: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.prices_list.open {
+  padding-bottom: 10px;
+}
+.header_accordion {
+  margin-bottom: 10px;
 }
 .price_btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 39px;
-  padding-right: 39px;
-  width: 250px;
-  height: 50px;
+  padding-right: 40px;
+  width: 100%;
+  min-height: 50px;
 
   font-weight: 700;
   font-size: 20px;
@@ -1069,18 +936,84 @@ a:active {
   border: 1px solid #e3e1d5;
   border-radius: 20px;
 }
-.price_btn:hover,
-.price_btn:focus {
-  color: white;
-  background-color: blueviolet;
-  border: 1px solid blueviolet;
-  transition: 3s;
-  cursor: pointer;
+.accordion_description_card {
+  height: 0px;
+  transition: all 250ms linear;
+
+  width: 250px;
+  font-family: "Inter";
+  background: #d6e7d2;
+  border-radius: 20px;
 }
 
-.prices_list_item .prices_list:not(:last-of-type) .price_btn {
-  margin-bottom: 32px;
+.accordion_description_card .accordion_btn {
 }
+.accordion_description_card .card_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  padding-top: 16px;
+  padding-left: 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 3;
+  border-bottom: 0.5px solid #aea1a1;
+
+  color: var(--color-black);
+  transition: color 250ms linear;
+}
+.prices_list.open .card_title {
+  min-height: 35px;
+}
+.accordion_description_card .description_price_card {
+  margin-bottom: 6px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1;
+
+  color: var(--color-primary-grey);
+}
+
+.accordion_description_card .per_price {
+  margin-bottom: 12px;
+  padding-left: 40px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-accept-tomato);
+}
+.accordion_description_card .price_or {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-black);
+}
+.accordion_description_card .price_order {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  padding: 3px 20px;
+  border-radius: 10px;
+  border-color: var(--color-second-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--color-primary-grey);
+  background-color: var(--color-second-white);
+}
+.second_btn {
+  margin-right: 40px;
+}
+
+/* .prices_list_item .prices_list:not(:last-of-type) .price_btn {
+  margin-bottom: 32px;
+} */
 
 .prices_text_call {
   text-align: end;
@@ -1111,10 +1044,10 @@ a:active {
   border: 1px solid var(--color-accept-tomato);
   border-radius: 5px;
 
-  background-color: #fff;
+  background-color: var(--color-second-white);
 }
 .price_contact_btn:hover {
-  color: white;
+  color: var(--color-second-white);
   background-color: var(--color-accept-tomato);
   border: 1px solid var(--color-accept-tomato);
   transition: 3s;
