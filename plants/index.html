@@ -125,7 +125,7 @@
             <div class="serv_adaptiv">
               <ul class="serv_ul">
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-aloe.png"
@@ -137,10 +137,10 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-lime.png"
@@ -152,10 +152,10 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-water.png"
@@ -167,10 +167,10 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-rose.png"
@@ -182,10 +182,10 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-many.png"
@@ -197,10 +197,10 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="service_list">
-                  <div class="list_conteiner">
+                  <a class="list_conteiner" href="#">
                     <img
                       class="service_list_img"
                       src="./image/plant-cactus.png"
@@ -212,7 +212,7 @@
                         Lorem Ipsum has been the industry
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -350,7 +350,7 @@
             alt="contact_woman"
           />
           <h2 class="contact_title">Contact us</h2>
-          <form
+          <!-- <form
             class="contact_form"
             action="./image/accordion_btn.svg"
             target="_top"
@@ -360,7 +360,51 @@
                 <option class="cont_opt" value="City">City</option>
               </select>
             </div>
-          </form>
+          </form> -->
+          <div class="select-container">
+            <div class="select">
+              <input
+                type="text"
+                id="input"
+                placeholder="City"
+                onfocus="this.blur();"
+              />
+            </div>
+            <div class="option-container">
+              <div class="option">
+                <label> Canandaigua, NY </label>
+                <article>
+                  <ul class="option_card">
+                    <li class="option_card_adress">
+                      City:
+                      <span class="span_card_adress">Canandaigua, NY</span>
+                    </li>
+                    <li class="option_card_adress">
+                      Phone:
+                      <a class="span_card_adress" href="tel:+1	585	393 0001"
+                        >+1 585 393 0001</a
+                      >
+                    </li>
+                    <li class="option_card_adress">
+                      Office address:
+                      <address class="span_card_adress">
+                        151 Charlotte Street
+                      </address>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+              <div class="option">
+                <label>New York City</label>
+              </div>
+              <div class="option">
+                <label>Yonkers, NY</label>
+              </div>
+              <div class="option">
+                <label>Sherrill, NY</label>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

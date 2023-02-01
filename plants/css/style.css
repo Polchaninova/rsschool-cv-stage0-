@@ -8,6 +8,9 @@
   --background-block-light: #edf2ec;
   --color-border-price: #aea1a1;
   --color-second-white: #fff;
+  --color-input-unactive: #d6e7d2;
+  --color-input-active: #c1e698;
+  --color-input-option: #dce9d9;
 }
 
 *,
@@ -34,6 +37,8 @@ img {
   display: block;
 }
 body {
+  height: 100vh;
+
   font-family: "Inter";
   background-color: var(--background-block-light);
 }
@@ -679,10 +684,18 @@ a:active {
 }
 /* div img+for card */
 .list_conteiner {
+  filter: blur(2px);
+  transition: 250ms linear;
+  cursor: pointer;
+}
+.list_conteiner:hover,
+.list_conteiner:focus {
+  filter: blur(0px);
 }
 /* img */
 .service_list_img {
 }
+
 /* div card descr */
 .service_card {
   padding-top: 10px;
@@ -693,6 +706,7 @@ a:active {
 
   border-radius: 0px 0px 20px 20px;
 }
+
 /* h2 */
 .service_card_title {
   margin-bottom: 10px;
@@ -894,24 +908,27 @@ a:active {
   color: var(--color-black);
 }
 .accordion_body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 /* accordion */
 .prices_list_item {
-  padding: 34px 41px;
+  margin-top: 60px;
+  margin-left: 8px;
+  padding: 34px 41px 34px 41px;
   margin: 60px 0 0 32;
-
-  max-width: 332px;
+  /* max-width: 332px; */
   width: 100%;
+  max-height: 282px;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
-
   box-shadow: 0 0 4px rgba (0, 0, 0, 0.2);
 }
 
 .prices_list {
-  margin: 10px 0;
   overflow: hidden;
+}
+.prices_list:not(:last-of-type) {
+  margin-bottom: 23px;
 }
 .prices_list.open {
   padding-bottom: 10px;
@@ -1208,7 +1225,9 @@ a:active {
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+
+  padding-top: 72px;
+  background: #edeeff;
 }
 .contact_img_woman {
   /* margin-left: 109px; */
@@ -1227,7 +1246,7 @@ a:active {
   color: var(--color-text-selection-green);
 }
 
-.contact_input {
+/* .contact_input {
   padding: 5px 26px 5px 20px;
   min-width: 450px;
   min-height: 50px;
@@ -1246,16 +1265,16 @@ a:active {
 
   text-indent: 1px;
   text-overflow: "";
-}
+} */
 /* .cont_opt {
   margin-left: 20px;
 } */
-.contact_input-wrapper {
+/* .contact_input-wrapper {
   position: relative;
   margin-top: 92px;
-  /* width: 450px; */
-}
-.contact_input-wrapper::after {
+  width: 450px;
+} */
+/* .contact_input-wrapper::after {
   content: "";
   position: absolute;
   display: block;
@@ -1265,7 +1284,107 @@ a:active {
   transform: translateY(-50%);
   right: 38px;
   background-image: url("../image/accordion_btn.png");
+} */
+
+.select-container {
+  position: relative;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  margin-top: 94px;
 }
+
+.select-container .select {
+  position: relative;
+  height: 50px;
+  transition: background-color 250ms linear;
+}
+
+.select-container .select::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 34px;
+  transform: translateY(-50%) rotate(45deg);
+  border-bottom: 2px solid #8ba07e;
+  border-right: 2px solid #8ba07e;
+  cursor: pointer;
+  transition: border-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select-container.active .select::after {
+  border: none;
+  border-left: 2px solid #8ba07e;
+  border-top: 2px solid #8ba07e;
+}
+
+.select-container .select input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+
+  background-color: var(--color-input-unactive);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  outline: none;
+  border: none;
+
+  font-weight: 400px;
+  font-size: 20px;
+  line-height: 2;
+  color: var(--color-primary-grey);
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.select-container.active .select input {
+  background-color: var(--color-input-active);
+}
+.select-container .option-container {
+  position: relative;
+  background-color: var(--color-input-option);
+  height: 0;
+  overflow-y: auto;
+  transition: background-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select-container.active .option-container {
+  height: 235px;
+  padding: 27px 50px 31px 24px;
+}
+.select-container .option-container .option {
+  position: relative;
+  height: 35px;
+  border-bottom: 1px solid #d9d9d9;
+  cursor: pointer;
+  display: flex;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.select-container .option-container .option:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.select-container .option-container .option:hover {
+  border-bottom: 1px solid #717171;
+  background-color: var(--color-input-option);
+}
+
+.select-container .option-container .option label {
+  font-size: 16px;
+  line-height: 2.5;
+  color: var(--color-text-selection-green);
+  cursor: pointer;
+  transition: color 250ms linear;
+}
+.select-container .option-container .option:hover label {
+  color: var(--color-primary-grey);
+}
+
 @media (max-width: 768px) {
   .container {
     padding-left: 50px;
