@@ -24,6 +24,18 @@ function onMenuLinkClick(e) {
     headerMenu.classList.remove(`active`);
   }
 }
+// service-blur
+
+//
+const buttons = document.querySelectorAll(`.button`);
+const cardsServ = document.querySelectorAll(".serv_ul");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    filter(currentCategory, cardsServ);
+  });
+});
+
 // accordion
 const pricesList = document.querySelectorAll(".prices_list");
 
@@ -70,7 +82,7 @@ let selectContainer = document.querySelector(".select-container");
 let select = document.querySelector(".select");
 let input = document.getElementById("input");
 let options = document.querySelectorAll(".select-container .option");
-let optionContainer = document.querySelectorAll(".option_container");
+let optionContainer = document.querySelector(".option_container");
 
 //
 
@@ -115,11 +127,8 @@ options.forEach((e) => {
     });
     e.classList.add("selected");
     showCardForCityName(cityName);
+    optionContainer.classList.remove("is_hidden");
   });
-
-  function toggleOption() {
-    optionContainer.classList.toggle("is_hidden");
-  }
 });
 
 function showCardForCityName(cityName) {

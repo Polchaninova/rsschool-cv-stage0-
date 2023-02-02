@@ -1349,6 +1349,7 @@ a:active {
 /* div */
 .option_container {
   position: relative;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1362,10 +1363,10 @@ a:active {
   visibility: hidden;
   opacity: 0;
 }
+
 /* ul */
 
 .option_card {
-  /* z-index: 10px; */
   padding: 17px 75px 15px 25px;
 
   display: flex;
