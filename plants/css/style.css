@@ -684,9 +684,6 @@ a:active {
 }
 /* div img+for card */
 .list_conteiner {
-  filter: blur(2px);
-  transition: 250ms linear;
-  cursor: pointer;
 }
 .list_conteiner:hover,
 .list_conteiner:focus {
@@ -694,6 +691,11 @@ a:active {
 }
 /* img */
 .service_list_img {
+  filter: blur(2px);
+  transition: 250ms linear;
+  cursor: pointer;
+  transition: 250ms linear;
+  cursor: pointer;
 }
 
 /* div card descr */
@@ -1245,47 +1247,6 @@ a:active {
 
   color: var(--color-text-selection-green);
 }
-
-/* .contact_input {
-  padding: 5px 26px 5px 20px;
-  min-width: 450px;
-  min-height: 50px;
-  background: #d6e7d2;
-
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 2;
-  color: var(--color-primary-grey);
-  border-color: #cde4b6;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  text-indent: 1px;
-  text-overflow: "";
-} */
-/* .cont_opt {
-  margin-left: 20px;
-} */
-/* .contact_input-wrapper {
-  position: relative;
-  margin-top: 92px;
-  width: 450px;
-} */
-/* .contact_input-wrapper::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 16px;
-  height: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 38px;
-  background-image: url("../image/accordion_btn.png");
-} */
-
 .select-container {
   position: relative;
   width: 450px;
@@ -1383,6 +1344,73 @@ a:active {
 }
 .select-container .option-container .option:hover label {
   color: var(--color-primary-grey);
+}
+
+/* div */
+.option_container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 448px;
+  height: 200px;
+  margin-top: 0px;
+  opacity: 1;
+}
+
+.option_container.is_hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+/* ul */
+
+.option_card {
+  /* z-index: 10px; */
+  padding: 17px 75px 15px 25px;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  border-radius: 20px;
+  border: 1px solid #000000;
+
+  background-color: var(--background-block-light);
+}
+/* li */
+.option_card_adress {
+  display: flex;
+  justify-content: space-between;
+}
+/* h4 */
+.option_card_label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+}
+
+/* span */
+.span_card_adress {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+  color: var(--color-primary-grey);
+}
+.btn_call_option {
+  margin-top: 30px;
+  text-align: center;
+}
+.option_btn_call {
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  padding: 7px 29px;
+  background-color: var(--background-block-light);
+  color: var(--color-primary-grey);
+  transition: background-color 250ms linear, color 250ms linear;
+}
+.option_btn_call:hover,
+.option_btn_call:focus {
+  color: var(--color-second-white);
+  background-color: var(--color-accept-tomato);
 }
 
 @media (max-width: 768px) {

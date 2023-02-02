@@ -65,10 +65,41 @@ function removeOpen(index1) {
     }
   });
 }
+
 let selectContainer = document.querySelector(".select-container");
 let select = document.querySelector(".select");
 let input = document.getElementById("input");
 let options = document.querySelectorAll(".select-container .option");
+let optionContainer = document.querySelectorAll(".option_container");
+
+//
+
+let optionCardAddresses = [
+  {
+    City: "Canandaigua, NY",
+    Phone: "+1	585	393 0001",
+    OfficeAddress: "151 Charlotte Street",
+    label_btn: "Call us",
+  },
+  {
+    City: "New York City",
+    Phone: "+1	212	456 0002",
+    OfficeAddress: "9 East 91st Street",
+    label_btn: "Call us",
+  },
+  {
+    City: "Yonkers, NY",
+    Phone: "+1	914	678 0003",
+    OfficeAddress: "511 Warburton Ave",
+    label_btn: "Call us",
+  },
+  {
+    City: "Sherrill, NY",
+    Phone: "+1	315	908 0004",
+    OfficeAddress: "14 WEST Noyes BLVD",
+    label_btn: "Call us",
+  },
+];
 
 select.onclick = () => {
   selectContainer.classList.toggle("active");
@@ -76,11 +107,27 @@ select.onclick = () => {
 
 options.forEach((e) => {
   e.addEventListener("click", () => {
-    input.value = e.innerText;
+    const cityName = e.innerText;
+    input.value = cityName;
     selectContainer.classList.remove("active");
     options.forEach((e) => {
       e.classList.remove("selected");
     });
     e.classList.add("selected");
+    showCardForCityName(cityName);
   });
+
+  function toggleOption() {
+    optionContainer.classList.toggle("is_hidden");
+  }
 });
+
+function showCardForCityName(cityName) {
+  const cityInfo = optionCardAddresses.find((city) => city.City === cityName);
+  console.log(cityInfo);
+  const card = document.querySelector(".option_card");
+  card.querySelector(".span_card_adress").textContent = cityInfo.City;
+  card.querySelector(".span_card_phone").textContent = cityInfo.Phone;
+  card.querySelector(".span_office_address").textContent =
+    cityInfo.OfficeAddress;
+}
