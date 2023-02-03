@@ -685,18 +685,42 @@ a:active {
 /* div img+for card */
 .list_conteiner {
 }
-.list_conteiner:hover,
+/* .list_conteiner:hover,
 .list_conteiner:focus {
   filter: blur(0px);
-}
+} */
 /* img */
 .service_list_img {
-  filter: blur(2px);
-  transition: 250ms linear;
-  cursor: pointer;
+  filter: blur(0px);
   transition: 250ms linear;
   cursor: pointer;
 }
+
+.anime {
+  transform: scale(0);
+  opacity: 0;
+}
+.blur {
+  /* animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; */
+  filter: blur(2px);
+}
+
+/* @keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    font-size: 0;
+    margin: 0;
+  }
+} */
 
 /* div card descr */
 .service_card {
