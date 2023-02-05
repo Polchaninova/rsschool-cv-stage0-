@@ -31,13 +31,12 @@ function app() {
 
   function filter(category, items) {
     items.forEach((item) => {
-      const isItemFiltered = !item.classList.contains(category);
-      const isShowAll = category.toLowerCase() === "all";
-      if (isItemFiltered && !isShowAll) {
-        item.classList.add("anime");
+      const isItemFiltered = item.classList.contains(category);
+
+      if (isItemFiltered) {
+        item.classList.remove("blur");
       } else {
-        item.classList.remove("hide");
-        item.classList.remove("anime");
+        item.classList.add("blur");
       }
     });
   }
@@ -47,14 +46,6 @@ function app() {
       const currentCategory = button.dataset.filter;
       filter(currentCategory, cards);
     });
-  });
-
-  cards.forEach((card) => {
-    card.ontransitionend = function () {
-      if (card.classList.contains("anime")) {
-        card.classList.add("hide");
-      }
-    };
   });
 }
 
