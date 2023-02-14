@@ -4,13 +4,21 @@ var __webpack_exports__ = {};
   !*** ./src/app.js ***!
   \********************/
 const time = document.querySelector(".time");
-
 console.log(time);
 
-time.textContent = "Text";
-const date = new Date();
+function showTime() {
+  const date = new Date();
 
-console.log(date);
+  const currentTime = date.toLocaleTimeString();
+  console.log(currentTime);
+
+  time.textContent = currentTime;
+}
+
+showTime();
+setInterval(() => {
+  showTime();
+}, 1000);
 
 /******/ })()
 ;

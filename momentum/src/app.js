@@ -1,16 +1,33 @@
-const time = document.querySelector(".time");
-console.log(time);
-
-function showTime() {
-  const date = new Date();
-
-  const currentTime = date.toLocaleTimeString();
-  console.log(currentTime);
-
-  time.textContent = currentTime;
-}
+import { showTime } from "./showTime";
+import { showDate } from "./showDate";
 
 showTime();
 setInterval(() => {
   showTime();
 }, 1000);
+
+showDate();
+
+
+const greeting = document.querySelector(".greeting");
+console.log(greeting);
+
+function getTimeOfDay() {
+  const date = new Date();
+
+  const hours = date.getHours();
+  console.log(hours);
+}
+getTimeOfDay();
+
+
+
+
+
+
+
+
+
+
+// const name = document.querySelector(".name");
+// console.log(name);
