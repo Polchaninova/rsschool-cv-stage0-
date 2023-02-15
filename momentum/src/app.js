@@ -3,7 +3,9 @@ import { showDate } from "./showDate";
 import { showGreeting } from "./showGreeting";
 import { setLocalStorage } from "./setLocalStorage";
 import { getRandomNum } from "./getRandomNum";
+import { getWeather } from "./getWeather";
 
+getWeather();
 showTime();
 setInterval(() => {
   showTime();

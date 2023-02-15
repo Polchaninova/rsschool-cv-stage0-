@@ -3,11 +3,9 @@ console.log(date);
 
 export function showDate() {
   const options = {
+    weekday: "long",
     month: "long",
     day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    timeZone: "UTC",
   };
 
   const currentDate = new Date().toLocaleDateString("en-En", options);
