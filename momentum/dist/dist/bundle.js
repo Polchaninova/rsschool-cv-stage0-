@@ -1,25 +1,2 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-const time = document.querySelector(".time");
-console.log(time);
-
-function showTime() {
-  const date = new Date();
-
-  const currentTime = date.toLocaleTimeString();
-  console.log(currentTime);
-
-  time.textContent = currentTime;
-}
-
-showTime();
-setInterval(() => {
-  showTime();
-}, 1000);
-
-/******/ })()
-;
+(()=>{"use strict";const e=document.querySelector(".greeting");function t(){const t=function(){const e=(new Date).getHours();let t;return console.log(e),e>=5&&e<12?t="morning":e>=12&&e<18?t="afternoon":e>=18&&e<24?t="evening":e>=0&&e<5&&(t="night)"),t}(),n=`Good ${t}`;e.textContent=n}console.log(e);const n=document.querySelector(".time");function o(){const e=(new Date).toLocaleTimeString();n.textContent=e,t()}const c=document.querySelector(".date");console.log(c);const a=document.querySelector(".name");let r;function l(e,t){return e=Math.ceil(1),t=Math.floor(20),r=l,Math.floor(Math.random()*(t-e+1))+e}console.log(a),window.addEventListener("load",(function(){localStorage.getItem("name")&&(a.value=localStorage.getItem("name"))})),console.log(void 0),l(1,20).toString().padStart(0,2),document.body.style.backgroundImage="url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')",o(),setInterval((()=>{o()}),1e3),function(){const e=(new Date).toLocaleDateString("en-En",{month:"long",day:"numeric",hour:"numeric",minute:"numeric",timeZone:"UTC"});c.textContent=e}(),t(),window.addEventListener("beforeunload",(function(){localStorage.setItem("name",a.value)})),l()})();
 //# sourceMappingURL=bundle.js.map

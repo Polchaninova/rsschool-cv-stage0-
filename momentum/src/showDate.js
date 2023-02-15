@@ -11,7 +11,7 @@ export function showDate() {
   };
 
   const currentDate = new Date().toLocaleDateString("en-En", options);
-  console.log(currentDate);
+  // console.log(currentDate);
 
   date.textContent = currentDate;
 }

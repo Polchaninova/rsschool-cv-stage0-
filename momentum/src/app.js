@@ -1,5 +1,8 @@
 import { showTime } from "./showTime";
 import { showDate } from "./showDate";
+import { showGreeting } from "./showGreeting";
+import { setLocalStorage } from "./setLocalStorage";
+import { getRandomNum } from "./getRandomNum";
 
 showTime();
 setInterval(() => {
@@ -8,26 +11,8 @@ setInterval(() => {
 
 showDate();
 
+showGreeting();
 
-const greeting = document.querySelector(".greeting");
-console.log(greeting);
+window.addEventListener("beforeunload", setLocalStorage);
 
-function getTimeOfDay() {
-  const date = new Date();
-
-  const hours = date.getHours();
-  console.log(hours);
-}
-getTimeOfDay();
-
-
-
-
-
-
-
-
-
-
-// const name = document.querySelector(".name");
-// console.log(name);
+getRandomNum();
