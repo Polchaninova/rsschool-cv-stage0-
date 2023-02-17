@@ -6,15 +6,52 @@
     <link href="assets/favicon.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="../css/owfont-regular.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>momentum</title>
+    <title>Momentum</title>
   </head>
   <body>
     <header class="header">
       <div class="player">
         <div class="player-controls">
           <button class="play-prev player-icon"></button>
-          <button class="play player-icon"></button>
+          <button class="play play-pause player-icon" id="pause"></button>
           <button class="play-next player-icon"></button>
+        </div>
+        <div class="audio-player">
+          <div class="song_name"></div>
+          <audio
+            src="../assets/sounds/Aqua Caelestis.mp3"
+            class="audio"
+          ></audio>
+          <div class="progress-container">
+            <span class="current-time progress-time">0:00</span>
+
+            <input
+              class="range progress"
+              id="seek-slider"
+              type="range"
+              max="100"
+              value="0"
+            />
+            <!-- <div class="progress-time-container"> -->
+            <span class="duration progress-time">0:00</span>
+          </div>
+          <!-- </div> -->
+
+          <div class="progress-mute-container">
+            <output class="volume-output">100</output>
+            <input
+              class="range range_mute"
+              id="volume-output"
+              type="range"
+              max="100"
+              value="100"
+            />
+            <span class="icon-volume">
+              <svg class="volume-svg">
+                <use href="../assets/svg/sprite.svg#icon-volume"></use>
+              </svg>
+            </span>
+          </div>
         </div>
         <ul class="play-list"></ul>
       </div>

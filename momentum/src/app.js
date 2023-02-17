@@ -4,6 +4,8 @@ import { showGreeting } from "./showGreeting";
 import { setLocalStorage } from "./setLocalStorage";
 import { getRandomNum } from "./getRandomNum";
 import { getWeather } from "./getWeather";
+import { getQuotes, showQuotes } from "./getQuotes";
+import { playAudio } from "./playAudio";
 
 getWeather();
 showTime();
@@ -18,3 +20,7 @@ showGreeting();
 window.addEventListener("beforeunload", setLocalStorage);
 
 getRandomNum();
+
+getQuotes();
+showQuotes();
+// playAudio();
