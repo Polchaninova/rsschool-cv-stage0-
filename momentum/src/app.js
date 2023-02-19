@@ -6,6 +6,7 @@ import { getRandomNum } from "./getRandomNum";
 import { getWeather } from "./getWeather";
 import { getQuotes, showQuotes } from "./getQuotes";
 import { playAudio } from "./playAudio";
+import { renderPlaylist } from "./playList";
 
 getWeather();
 showTime();
@@ -23,4 +24,5 @@ getRandomNum();
 
 getQuotes();
 showQuotes();
+renderPlaylist();
 // playAudio();
